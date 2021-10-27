@@ -1,0 +1,5 @@
+# gitignore files
+node_modules/
+*.swp
+*.swo
+*.swn
