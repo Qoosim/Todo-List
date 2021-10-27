@@ -4,11 +4,17 @@
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-** Modify this file to match your project, remove sections that don't apply. **
+**This is an example of how you may give instructions on setting up your project locally.
+Modify this file to match your project, remove sections that don't apply.**
 
 To get a local copy up and running on your machine, follow these simple steps.
-  clone the project with `` git clone git@github.com:Qoosim/webpack-boilerplate.git `` and you can start your own project on it.
+clone the project with 
+`` 
+  git clone git@github.com:Qoosim/webpack-boilerplate.git 
+
+`` 
+and you can start your own project on it.
+
 
 ## Author
 
