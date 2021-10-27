@@ -8,13 +8,11 @@
 Modify this file to match your project, remove sections that don't apply.**
 
 To get a local copy up and running on your machine, follow these simple steps.
-clone the project with 
-`` 
+Enter this in your terminal 👇 
+``` 
   git clone git@github.com:Qoosim/webpack-boilerplate.git 
-
-`` 
-and you can start your own project on it.
-
+``` 
+and you can start building your own project on it.
 
 ## Author
 
