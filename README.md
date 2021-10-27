@@ -4,6 +4,8 @@
 
 > "To-do list" is a simple app that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete whenever you are done with each of them.
 
+![screenshot](./images/todo_list.jpeg)
+
 ## Author
 
 👤 **Qoosim AbdulGhaniyy**
