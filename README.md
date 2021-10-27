@@ -1,3 +1,5 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
 # Todo List Project
 
 > "To-do list" is a simple app that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete whenever you are done with each of them.
