@@ -11,12 +11,9 @@ let tasks = [
   { desc: 'Go to gym', completed: false, index: 2 },
 ];
 
-// tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+tasks = JSON.parse(localStorage.getItem('tasks')) || tasks;
 
 const createTask = () => { // eslint-disable-line no-unused-vars
-  if (localStorage.getItem('tasks')) {
-    tasks = JSON.parse(localStorage.getItem('tasks'));
-  }
   tasks.forEach((task) => {
     const li = document.createElement('li');
     li.className = 'list-group-items';
