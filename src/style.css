@@ -13,3 +13,7 @@ body {
 .innerContainer {
   box-shadow: 3px 3px 10px #000;
 }
+
+::placeholder {
+  font-style: italic;
+}
