@@ -1,19 +1,28 @@
 import './style.css';
 import getStatus from './status';
+import addTodo from './functions';
 
 const output = document.querySelector('.output');
 const ul = document.createElement('ul');
 ul.classList.add('list-group', 'list-unstyled');
+const inputText = document.querySelector('.inputText');
+const addBtn = document.querySelector('.addBtn');
 
+/**
 let tasks = [
   { desc: 'Solve coding challenge', completed: false, index: 0 },
   { desc: 'Attend tech conference', completed: false, index: 1 },
   { desc: 'Go to gym', completed: false, index: 2 },
 ];
-
-tasks = JSON.parse(localStorage.getItem('tasks')) || tasks;
+*/
+const getList = () => {
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  return tasks;
+};
 
 const createTask = () => { // eslint-disable-line no-unused-vars
+  const tasks = getList();
+  ul.innerHTML = '';
   tasks.forEach((task) => {
     const li = document.createElement('li');
     li.className = 'list-group-items';
@@ -44,5 +53,13 @@ const createTask = () => { // eslint-disable-line no-unused-vars
   });
   localStorage.setItem('tasks', JSON.stringify(tasks));
 };
+
+addBtn.addEventListener('click', () => {
+  const tasks = getList();
+  addTodo(inputText.value, tasks);
+  createTask();
+  inputText.value = '';
+  inputText.focus();
+});
 
 createTask();
