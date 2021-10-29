@@ -1,8 +1,10 @@
+// Handle add todo-list to the array of objects
 const addTodo = (list, task) => {
   task.push({ desc: list, completed: false, index: task.length + 1 });
   localStorage.setItem('tasks', JSON.stringify(task));
 };
 
+// Handle remove todo-list
 const removeTodo = (elem, tasks) => {
   const text = elem.children[0].children[1].value;
   tasks.forEach((task) => {

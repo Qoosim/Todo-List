@@ -8,19 +8,14 @@ ul.classList.add('list-group', 'list-unstyled');
 const inputText = document.querySelector('.inputText');
 const addBtn = document.querySelector('.addBtn');
 
-/**
-let tasks = [
-  { desc: 'Solve coding challenge', completed: false, index: 0 },
-  { desc: 'Attend tech conference', completed: false, index: 1 },
-  { desc: 'Go to gym', completed: false, index: 2 },
-];
-*/
+// Function to retrieve lists from the local storage
 const getList = () => {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   return tasks;
 };
 
-const createTask = () => { // eslint-disable-line no-unused-vars
+const createTask = () => {
+  // Handle create element and place their content;
   const tasks = getList();
   ul.innerHTML = ''; // Prevent duplicating
   tasks.forEach((task) => {
@@ -36,6 +31,14 @@ const createTask = () => { // eslint-disable-line no-unused-vars
     const text = document.createElement('input');
     text.classList.add('mx-4', 'border', 'border-0');
     text.value = task.desc;
+
+    // Event to edit todo text
+    text.addEventListener('change', () => {
+      task.desc = text.value;
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    });
+
+    // Event to checked and unchecked
     checkbox.addEventListener('change', () => {
       getStatus(checkbox, task);
       localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -51,6 +54,7 @@ const createTask = () => { // eslint-disable-line no-unused-vars
     ul.appendChild(li);
     output.appendChild(ul);
 
+    // Event to change dots icon to trash icon after double clicking
     verticalDots.addEventListener('dblclick', () => {
       const trash = document.createElement('i');
       trash.classList.add('bi', 'bi-trash');
@@ -58,6 +62,7 @@ const createTask = () => { // eslint-disable-line no-unused-vars
       verticalDots.remove();
       div.append(label, trash);
 
+      // Event to remove todo-list
       trash.addEventListener('click', (e) => {
         const tasks = getList();
         const removeItem = e.target.parentElement;
@@ -68,6 +73,7 @@ const createTask = () => { // eslint-disable-line no-unused-vars
   localStorage.setItem('tasks', JSON.stringify(tasks));
 };
 
+// Event to add todo-list
 addBtn.addEventListener('click', () => {
   if (inputText.validity.valueMissing) {
     inputText.setCustomValidity('Please enter todo list!');
