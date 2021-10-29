@@ -1,6 +1,6 @@
 import './style.css';
 import getStatus from './status';
-import addTodo from './functions';
+import { addTodo, removeTodo } from './functions';
 
 const output = document.querySelector('.output');
 const ul = document.createElement('ul');
@@ -22,7 +22,7 @@ const getList = () => {
 
 const createTask = () => { // eslint-disable-line no-unused-vars
   const tasks = getList();
-  ul.innerHTML = '';
+  ul.innerHTML = ''; // Prevent duplicating
   tasks.forEach((task) => {
     const li = document.createElement('li');
     li.className = 'list-group-items';
@@ -50,16 +50,35 @@ const createTask = () => { // eslint-disable-line no-unused-vars
     li.appendChild(div);
     ul.appendChild(li);
     output.appendChild(ul);
+
+    verticalDots.addEventListener('dblclick', () => {
+      const trash = document.createElement('i');
+      trash.classList.add('bi', 'bi-trash');
+      trash.style.cursor = 'pointer';
+      verticalDots.remove();
+      div.append(label, trash);
+
+      trash.addEventListener('click', (e) => {
+        const tasks = getList();
+        const removeItem = e.target.parentElement;
+        removeTodo(removeItem, tasks);
+      });
+    });
   });
   localStorage.setItem('tasks', JSON.stringify(tasks));
 };
 
 addBtn.addEventListener('click', () => {
-  const tasks = getList();
-  addTodo(inputText.value, tasks);
-  createTask();
-  inputText.value = '';
-  inputText.focus();
+  if (inputText.validity.valueMissing) {
+    inputText.setCustomValidity('Please enter todo list!');
+    inputText.reportValidity();
+  } else {
+    const tasks = getList();
+    addTodo(inputText.value, tasks);
+    createTask();
+    inputText.value = '';
+    inputText.focus();
+  }
 });
 
 createTask();

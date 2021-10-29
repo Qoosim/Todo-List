@@ -3,4 +3,15 @@ const addTodo = (list, task) => {
   localStorage.setItem('tasks', JSON.stringify(task));
 };
 
-export default addTodo;
+const removeTodo = (elem, tasks) => {
+  const text = elem.children[0].children[1].value;
+  tasks.forEach((task) => {
+    if (task.desc === text) {
+      tasks.splice(tasks.indexOf(task), 1);
+    }
+  });
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+  elem.parentElement.remove();
+};
+
+export { addTodo, removeTodo };
