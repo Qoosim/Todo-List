@@ -4,7 +4,34 @@
 
 > "To-do list" is a simple app that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete whenever you are done with each of them.
 
-![screenshot](./src/images/todo_interactive.jpeg)
+![screenshot](./src/images/todo_final.jpeg)
+
+Additional description about the project and its features.
+
+## Built with
+
+- HTML
+- CSS
+- JAVASCRIPT
+
+## Live Demo
+
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+### You need npm installed in your comnputer
+
+### clone the repo
+
+### Run the following commands
+
+> cd todo-list <br>
+  npm install <br>
+  npm run build <br>
+  npm run start
+
+### It will run in your http://localhost:8080/
 
 ## Author
 

@@ -14,14 +14,14 @@ const inputText = document.querySelector('.inputText');
 const addBtn = document.querySelector('.addBtn');
 const delAll = document.querySelector('.delAll');
 
-// Function to retrieve lists from the local storage
+// Function to retrieve lists from the local storage.
 const getList = () => {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   return tasks;
 };
 
+// Function to create element and place their content.
 const createTask = () => {
-  // Handle create element and place their content;
   const tasks = getList();
   ul.innerHTML = ''; // Prevent duplicating
   tasks.forEach((task) => {
@@ -38,13 +38,13 @@ const createTask = () => {
     text.classList.add('mx-4', 'border', 'border-0');
     text.value = task.desc;
 
-    // Event to edit todo text
+    // Event to edit todo text.
     text.addEventListener('change', () => {
       task.desc = text.value;
       localStorage.setItem('tasks', JSON.stringify(tasks));
     });
 
-    // Event to checked and unchecked
+    // Event to checked and unchecked.
     checkbox.addEventListener('change', () => {
       getStatus(checkbox, task);
       localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -60,7 +60,7 @@ const createTask = () => {
     ul.appendChild(li);
     output.appendChild(ul);
 
-    // Event to change dots icon to trash icon after double clicking
+    // Event to change dots icon to trash icon after double clicking.
     verticalDots.addEventListener('dblclick', () => {
       const trash = document.createElement('i');
       trash.classList.add('bi', 'bi-trash');
@@ -68,7 +68,7 @@ const createTask = () => {
       verticalDots.remove();
       div.append(label, trash);
 
-      // Event to remove todo-list
+      // Event to remove todo-list.
       trash.addEventListener('click', (e) => {
         const tasks = getList();
         const removeItem = e.target.parentElement;
@@ -79,7 +79,7 @@ const createTask = () => {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 };
 
-// Event to add todo-list
+// Event to add todo-list.
 addBtn.addEventListener('click', () => {
   if (inputText.validity.valueMissing) {
     inputText.setCustomValidity('Please enter todo list!');
@@ -93,7 +93,7 @@ addBtn.addEventListener('click', () => {
   }
 });
 
-// Event to delete all completed tasks
+// Event to delete all completed tasks.
 delAll.addEventListener('click', () => {
   const tasks = getList();
   removeCompleted(tasks);
