@@ -10,16 +10,16 @@
 Additional description about the project and its features.
 
 
-## Built with
+## 🖥️ Built with
 
 - HTML
 - CSS
 - JAVASCRIPT
 
-## Live Demo
+## 🚚 Live Demo
 [Live Demo](https://raw.githack.com/Qoosim/Todo-List/add_remove/src/index.html) :point_left:
 
-## Getting Started
+## 🕹️ Getting Started
 
 To get a local copy up and running on your machine, follow these simple steps.
 
@@ -36,20 +36,20 @@ To get a local copy up and running on your machine, follow these simple steps.
 
 ### It will run in your http://localhost:8080/
 
-## 👨‍💻Author
+## 👨‍💻 Author
 
 👤 **Qoosim AbdulGhaniyy**
 
 - GitHub: [Qoosim](https://github.com/Qoosim)
 - LinkedIn: [Qoosim](https://www.linkedin.com/in/qoosim)
 
-## 🕹️🤝 Contributing
+## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## 🕵️‍♂️Show your support
+## 🕵️‍♂️ Show your support
 
 Give a ⭐️ if you like this project!
 
