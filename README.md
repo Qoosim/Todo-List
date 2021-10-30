@@ -6,7 +6,9 @@
 
 ![screenshot](./src/images/todo_final.jpeg)
 
+
 Additional description about the project and its features.
+
 
 ## Built with
 
@@ -15,7 +17,7 @@ Additional description about the project and its features.
 - JAVASCRIPT
 
 ## Live Demo
-[Live Demo](https://raw.githack.com/Qoosim/Todo-List/add_remove/src/index.html) :left_pointer:
+[Live Demo](https://raw.githack.com/Qoosim/Todo-List/add_remove/src/index.html) :point_left:
 
 ## Getting Started
 
@@ -27,7 +29,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Run the following commands
 
-> cd todo-list <br>
+> cd Todo-List <br>
   npm install <br>
   npm run build <br>
   npm run start
