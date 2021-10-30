@@ -21,7 +21,7 @@ Additional description about the project and its features.
 
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+To get a local copy up and running on your machine, follow these simple steps.
 
 ### You need npm installed in your comnputer
 
