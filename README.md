@@ -23,37 +23,37 @@ Additional description about the project and its features.
 
 To get a local copy up and running on your machine, follow these simple steps.
 
-### You need npm installed in your comnputer
+- You need npm installed in your comnputer 
 
-### clone the repo
+- clone the repo 
 
-### Run the following commands
+- Run the following commands 
 
-> cd Todo-List <br>
-  npm install <br>
-  npm run build <br>
-  npm run start
+> cd Todo-List <br> 
+  npm install <br> 
+  npm run build <br> 
+  npm run start 
 
 ### It will run in your http://localhost:8080/
 
-## Author
+## 👨‍💻Author
 
 👤 **Qoosim AbdulGhaniyy**
 
 - GitHub: [Qoosim](https://github.com/Qoosim)
 - LinkedIn: [Qoosim](https://www.linkedin.com/in/qoosim)
 
-## 🤝 Contributing
+## 🕹️🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support
+## 🕵️‍♂️Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+## 📦 Acknowledgments
 
 - Hat tip to anyone whose code was used
 - Inspiration
