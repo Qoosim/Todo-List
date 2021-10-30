@@ -1,10 +1,10 @@
-// Handle add todo-list to the array of objects
+// Function to add todo-list to the array of objects
 const addTodo = (list, task) => {
   task.push({ desc: list, completed: false, index: task.length + 1 });
   localStorage.setItem('tasks', JSON.stringify(task));
 };
 
-// Handle remove todo-list
+// Function to remove todo-list
 const removeTodo = (elem, tasks) => {
   const text = elem.children[0].children[1].value;
   tasks.forEach((task) => {
@@ -16,4 +16,23 @@ const removeTodo = (elem, tasks) => {
   elem.parentElement.remove();
 };
 
-export { addTodo, removeTodo };
+const updateIndex = (task) => {
+  let list = 1;
+  task.forEach((item) => {
+    item.index = list;
+    list += 1;
+  });
+};
+
+const removeCompleted = (task) => {
+  task = task.filter((elem) => elem.completed === false); // eslint-disable-line no-unused-vars
+  updateIndex(task);
+  localStorage.setItem('tasks', JSON.stringify(task));
+};
+
+export {
+  addTodo,
+  removeTodo,
+  removeCompleted,
+  updateIndex,
+};

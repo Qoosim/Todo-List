@@ -1,12 +1,18 @@
 import './style.css';
 import getStatus from './status';
-import { addTodo, removeTodo } from './functions';
+import {
+  addTodo,
+  removeTodo,
+  removeCompleted,
+  updateIndex,
+} from './functions';
 
 const output = document.querySelector('.output');
 const ul = document.createElement('ul');
 ul.classList.add('list-group', 'list-unstyled');
 const inputText = document.querySelector('.inputText');
 const addBtn = document.querySelector('.addBtn');
+const delAll = document.querySelector('.delAll');
 
 // Function to retrieve lists from the local storage
 const getList = () => {
@@ -85,6 +91,14 @@ addBtn.addEventListener('click', () => {
     inputText.value = '';
     inputText.focus();
   }
+});
+
+// Event to delete all completed tasks
+delAll.addEventListener('click', () => {
+  const tasks = getList();
+  removeCompleted(tasks);
+  updateIndex(tasks);
+  createTask();
 });
 
 createTask();
