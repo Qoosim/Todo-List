@@ -17,7 +17,7 @@ Additional description about the project and its features.
 - JAVASCRIPT
 
 ## 🚚 Live Demo
-[Live Demo](https://raw.githack.com/Qoosim/Todo-List/main/src/index.html) :point_left:
+[Live Demo](https://raw.githack.com/Qoosim/Todo-List/main/dist/index.html) :point_left:
 
 ## 🕹️ Getting Started
 
