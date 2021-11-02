@@ -60,7 +60,7 @@ const createTask = () => {
     ul.appendChild(li);
     output.appendChild(ul);
 
-    // Event to change dots icon to trash icon after double clicking.
+    // Event to change dots icon to trash icon after single clicking.
     verticalDots.addEventListener('click', () => {
       const trash = document.createElement('i');
       trash.classList.add('bi', 'bi-trash');
