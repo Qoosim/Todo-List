@@ -4,7 +4,7 @@
   "description": "> I will build a simple but powerful webpack boilerplate, which can later be used as a starting point in my projects.",
   "private": true,
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --env=jsdom",
     "start": "webpack serve --open",
     "build": "webpack"
   },
@@ -44,7 +44,6 @@
   "jest": {
     "resetMocks": false,
     "setupFiles": [
-      "./__setups__/localstorage.js"
-    ]
+      "./__setups__/localstorage.js", "jest-localstorage-mock"]
   }
 }
