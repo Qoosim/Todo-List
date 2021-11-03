@@ -12,7 +12,6 @@ describe('test add task function', () => {
   });
 });
 
-/*
 describe('test to remove task function', () => {
   const taskList = [];
   const taskListLen = taskList.length;
@@ -22,4 +21,3 @@ describe('test to remove task function', () => {
     expect(taskList).toHaveLength(taskListLen - 1);
   });
 });
-*/
