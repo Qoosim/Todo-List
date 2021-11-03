@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1635969847438" clover="3.2.0">
-  <project timestamp="1635969847438" name="All files">
+<coverage generated="1635973991719" clover="3.2.0">
+  <project timestamp="1635973991719" name="All files">
     <metrics statements="19" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="1" elements="28" coveredelements="7" complexity="0" loc="19" ncloc="19" packages="1" files="1" classes="1"/>
-    <file name="functions.js" path="/home/taher/Documents/Microverse_Program/Module_2/Todo-List/src/functions.js">
+    <file name="functions.js" path="/home/qoosim/Microverse/Projects/Javascript/Todo-List/src/functions.js">
       <metrics statements="19" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="1"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="2" type="stmt"/>
