@@ -4,6 +4,11 @@ const addTodo = (list, task) => {
   localStorage.setItem('tasks', JSON.stringify(task));
 };
 
+// Function to edit task.
+const edit = (tx,task,tasks) => {
+  task.desc = tx;
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+};
 // Function to remove todo-list.
 const removeTodo = (elem, tasks) => {
   const text = elem.children[0].children[1].value;
@@ -37,4 +42,5 @@ export {
   removeTodo,
   removeCompleted,
   updateIndex,
+  edit
 };
