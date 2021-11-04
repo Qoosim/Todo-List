@@ -1,5 +1,5 @@
-import { edit } from './src/functions.js';
-import { default as getStatus } from './src/status.js';
+import { edit, removeCompleted } from './src/functions';
+import getStatus from './src/status';
 
 // test edit function
 test('test edit function', () => {
@@ -8,54 +8,68 @@ test('test edit function', () => {
       desc: 'do my daily workout',
       completed: false,
       index: 1,
-    }
+    },
   ];
   const [task] = tasks;
   const newText = 'Visit my parent';
   edit(newText, task, tasks);
   expect(task.desc).toMatch('Visit my parent');
 });
-
-describe('Test task completed or not', () => {
+// test get status function.
+describe('Test task completed status', () => {
+  const taskList = [
+    {
+      desc: 'coding challenge',
+      completed: false,
+      index: 1,
+    },
+  ];
+  const [task] = taskList;
+  document.body.innerHTML = '<input type="checkbox" class="checked-box" checked>'
+    + '<input type="checkbox" class="checked-box">';
+  const elems = document.querySelectorAll('.checked-box');
   test('should mark task as completed', () => {
-    const taskList = [
-      {
-        desc: 'coding challenge',
-        completed: false,
-        index: 1,
-      },
-    ];
-    document.body.innerHTML = '<li>'
-    + '<div class ="div-test">'
-    + '<label><input type="checkbox" id="checked-box">'
-    + '<input type="text" value = "do my daily workout">'
-    + '</label>'
-    + '</div>'
-    + '</li>';
-    let elem = document.querySelector('#checked-box');
-    elem = elem.checked;
-    const task = taskList[0];
-    expect(() => getStatus(elem, task)).toBeTruthy();
+    getStatus(elems[0], task);
+    expect(task.completed).toBeTruthy();
   });
 
   test('test marks as not completed', () => {
-    const taskList = [
-      {
-        desc: 'coding challenge',
-        completed: false,
-        index: 1,
-      },
-    ];
-    document.body.innerHTML = '<li>'
-    + '<div class ="div-test">'
-    + '<label><input type="checkbox" id="checked-box">'
-    + '<input type="text" value = "do my daily workout">'
-    + '</label>'
-    + '</div>'
-    + '</li>';
-    const elem = document.querySelector('#checked-box');
-    const task = taskList[0];
-    getStatus(elem, task);
+    getStatus(elems[1], task);
     expect(task.completed).toBeFalsy();
+  });
+});
+// test clear all completed function
+describe('test features of clear all completed function', () => {
+  let tasks = [
+    {
+      desc: 'coding challenge',
+      completed: false,
+      index: 1,
+    },
+    {
+      desc: 'do my daily workout',
+      completed: true,
+      index: 2,
+    },
+    {
+      desc: 'visit my parents',
+      completed: false,
+      index: 3,
+    },
+  ];
+  const notCompletedTask = {
+    desc: 'coding challenge',
+    completed: false,
+    index: 1,
+  };
+  test('save only not completed items', () => {
+    removeCompleted(tasks);
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+    expect(tasks).toContainEqual(notCompletedTask);
+  });
+  test(' function reorder the task index ', () => {
+    const arrayIndex = [];
+    tasks.forEach((element) => arrayIndex.push(element.index));
+    expect(arrayIndex).toEqual([1, 2]);
   });
 });

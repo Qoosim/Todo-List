@@ -38,11 +38,11 @@ const createTask = () => {
     const text = document.createElement('input');
     text.classList.add('mx-4', 'border', 'border-0');
     text.value = task.desc;
-   
+
     // Event to edit todo text.
     text.addEventListener('change', (e) => {
       const tx = e.target.value;
-      edit(tx,task,tasks);
+      edit(tx, task, tasks);
     });
 
     // Event to checked and unchecked.
