@@ -5,7 +5,7 @@ const addTodo = (list, task) => {
 };
 
 // Function to edit task.
-const edit = (tx,task,tasks) => {
+const edit = (tx, task, tasks) => {
   task.desc = tx;
   localStorage.setItem('tasks', JSON.stringify(tasks));
 };
@@ -42,5 +42,5 @@ export {
   removeTodo,
   removeCompleted,
   updateIndex,
-  edit
+  edit,
 };
