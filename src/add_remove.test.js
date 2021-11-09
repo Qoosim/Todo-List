@@ -1,5 +1,5 @@
 // test add task function.
-import { addTodo, removeTodo } from './src/functions';
+import { addTodo, removeTodo } from './functions';
 
 describe('test add task function', () => {
   const taskList = [];
@@ -7,11 +7,13 @@ describe('test add task function', () => {
     addTodo('do my daily workout', taskList);
     expect(taskList).toHaveLength(1);
   });
+
   test('give the right index for the new item', () => {
     addTodo('do my daily workout', taskList);
     expect(taskList[taskList.length - 1].index).toBe(2);
   });
 });
+
 // test remove task function
 describe('test remove task function', () => {
   const taskList = [
@@ -21,6 +23,7 @@ describe('test remove task function', () => {
       index: 1,
     },
   ];
+
   test('should remove item from task array', () => {
     document.body.innerHTML = '<li>'
     + '<div class ="div-test">'
@@ -33,6 +36,7 @@ describe('test remove task function', () => {
     removeTodo(elem, taskList);
     expect(taskList).toHaveLength(0);
   });
+
   test('should remove task from the DOM', () => {
     const elts = document.querySelectorAll('.div-test');
     expect(elts).toHaveLength(0);

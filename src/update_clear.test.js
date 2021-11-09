@@ -1,5 +1,5 @@
-import { edit, removeCompleted } from './src/functions';
-import getStatus from './src/status';
+import { edit, removeCompleted } from './functions';
+import getStatus from './status';
 
 // test edit function
 test('test edit function', () => {
