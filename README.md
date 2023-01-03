@@ -17,24 +17,26 @@ Additional description about the project and its features.
 - JAVASCRIPT
 
 ## 🚚 Live Demo
-[Live Demo](https://qoosim.github.io/Todo-List/dist/) :point_left:
+[Live Demo](https://qoosim.github.io/Todo-List/dist/)  :point_left:
 
-## 🕹️ Getting Started
+## 🖥️ Getting Started
+To get a local version up and running on your machine, follow these simple example steps.
 
-To get a local copy up and running on your machine, follow these simple steps.
+## 🛠️ Prerequisites
+```
+  Install Node.js on your machine
+```
 
-- You need npm installed in your comnputer 
+## 🕹️ Setup
+```
+  Clone the repository on your machine and cd into it
+    git@github.com:Qoosim/Todo-List.git
+    cd Todo-List
+  run npm install
+  run npm start
+```
 
-- clone the repo 
-
-- Run the following commands 
-
-> cd Todo-List <br> 
-  npm install <br> 
-  npm run build <br> 
-  npm run start 
-
-### It will run in your http://localhost:8080/
+### Note: ```It will run in your http://localhost:8080/```
 
 ## 👨‍💻 Author
 
