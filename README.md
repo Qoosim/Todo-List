@@ -37,7 +37,7 @@ To get a local version up and running on your machine, follow these simple examp
 ```
 
 ```
-   Note: It will run in your http://localhost:8080/
+   Note: It will run on http://localhost:8080
 ```
 
 ## 👨‍💻 Author
